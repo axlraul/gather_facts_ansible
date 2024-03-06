@@ -1,0 +1,11 @@
+---
+- name: Gather and display specific Ansible Facts
+  hosts: all_hosts
+  tasks:
+    - name: Gather Ansible Facts
+      setup:
+      register: ansible_facts_output
+
+    - name: Display specific facts
+      debug:
+        var: ansible_facts_output.ansible_facts.network_interfaces
