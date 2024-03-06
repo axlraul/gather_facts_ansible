@@ -8,5 +8,6 @@
   - name: Print all available facts
     ansible.builtin.debug:
       var: ansible_facts
-  - setup:
+  - name: filter
+    setup
       filter: *major*
