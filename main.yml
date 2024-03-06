@@ -1,6 +1,7 @@
 ---
 - name: Gather and display specific Ansible Facts
   hosts: all_nodes
+  gather_facts: true
   tasks:
   - name: Print all available facts
     ansible.builtin.debug:
@@ -10,4 +11,4 @@
       var: ansible_facts
   - name: filter
     setup:
-      filter: *major*
+      filter: ansible*
