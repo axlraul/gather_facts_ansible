@@ -1,6 +1,6 @@
 ---
 - name: Gather and display specific Ansible Facts
-  hosts: all_hosts
+  hosts: all_nodes
   tasks:
     - name: Gather Ansible Facts
       setup:
